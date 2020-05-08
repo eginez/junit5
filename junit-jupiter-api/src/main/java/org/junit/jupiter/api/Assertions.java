@@ -1613,6 +1613,19 @@ public class Assertions {
 		AssertLinesMatch.assertLinesMatch(expectedLines, actualLines, messageSupplier);
 	}
 
+	/**
+	* <em>Assert</em> that {@code expected} stream of {@linkplain String}s matches {@code actual}
+	* stream.
+	*
+	* <p>Find a detailed description of the matching algorithm in {@link #assertLinesMatch(List, List)}.
+	 *
+	 * @since 5.7
+	* @see #assertLinesMatch(List, List)
+	 */
+	public static void assertLinesMatches(Stream<String> expectedLines, Stream<String> actualLines) {
+		AssertLinesMatch.assertLinesMatch(expectedLines, actualLines);
+	}
+
 	// --- assertNotEquals -----------------------------------------------------
 
 	/**

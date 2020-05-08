@@ -22,7 +22,9 @@ import java.util.ArrayList;
 import java.util.Deque;
 import java.util.List;
 import java.util.regex.PatternSyntaxException;
+import java.util.stream.Collectors;
 import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
 /**
  * {@code AssertLinesMatch} is a collection of utility methods that support asserting
@@ -38,6 +40,11 @@ class AssertLinesMatch {
 
 	private static final int MAX_SNIPPET_LENGTH = 21;
 	private static final int MAX_LINES_IN_FAILURE_MESSAGE = 42;
+
+	static void assertLinesMatch(Stream<String> expectedLines, Stream<String> actualLines) {
+		assertLinesMatch(expectedLines.collect(Collectors.toList()), actualLines.collect(Collectors.toList()),
+			(Object) null);
+	}
 
 	static void assertLinesMatch(List<String> expectedLines, List<String> actualLines) {
 		assertLinesMatch(expectedLines, actualLines, (Object) null);
