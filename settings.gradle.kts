@@ -83,6 +83,7 @@ include("junit-vintage-engine")
 include("platform-tests")
 include("platform-tooling-support-tests")
 include("junit-bom")
+include ("junit-native-image-engine")
 
 // check that every subproject has a custom build file
 // based on the project name

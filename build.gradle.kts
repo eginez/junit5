@@ -58,7 +58,8 @@ val jupiterProjects by extra(listOf(
 		project(":junit-jupiter-api"),
 		project(":junit-jupiter-engine"),
 		project(":junit-jupiter-migrationsupport"),
-		project(":junit-jupiter-params")
+		project(":junit-jupiter-params"),
+		project ("junit-native-image-engine")
 ))
 
 val vintageProjects by extra(listOf(
