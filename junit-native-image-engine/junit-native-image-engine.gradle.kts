@@ -14,6 +14,7 @@ dependencies {
 	api("org.apiguardian:apiguardian-api")
 	api(project(":junit-platform-engine"))
 	api(project(":junit-jupiter-api"))
+	api(project(":junit-jupiter-engine"))
 
 	testImplementation(project(":junit-platform-launcher"))
 	testImplementation(project(":junit-platform-runner"))

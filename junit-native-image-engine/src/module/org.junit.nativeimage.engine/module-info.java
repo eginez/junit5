@@ -27,7 +27,7 @@ module org.junit.nativeimage.engine {
     //uses org.junit.jupiter.api.extension.Extension;
 
     provides org.junit.platform.engine.TestEngine
-            with org.junit.nativeimage.engine.NativeImageEngine
+            with org.junit.nativeimage.engine.NativeImageTestEngine
 
     opens org.junit.jupiter.engine.extension to org.junit.platform.commons;
 }
